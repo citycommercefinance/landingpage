@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# City Commerce Finance — Website
 
-## Getting Started
+Marketing site for **City Commerce Finance LLC** (Dubai). Built with **Next.js (App Router) + TypeScript**.
 
-First, run the development server:
+Currently shipped: the homepage with the frosted-glass navigation bar and the scroll-driven "door" hero that reveals the six service cards, plus placeholder downstream sections (Services, About, Certifications, Projects, Blogs, Contact) and SEO metadata + JSON-LD.
+
+---
+
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To check the production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm run start
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Deploy
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Push to GitHub
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git init
+git add .
+git commit -m "City Commerce Finance — nav + door hero"
+git branch -M main
+git remote add origin https://github.com/<your-username>/city-commerce-finance.git
+git push -u origin main
+```
 
-## Deploy on Vercel
+### Deploy on Vercel (recommended, free)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Go to https://vercel.com and sign in with GitHub.
+2. **Add New… → Project**, import the `city-commerce-finance` repo.
+3. Framework preset auto-detects **Next.js** — keep all defaults.
+4. Click **Deploy**. You'll get a live `*.vercel.app` URL in ~1 minute.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Every `git push` to `main` auto-deploys.
+
+---
+
+## Project structure
+
+```
+app/
+  layout.tsx              Root layout — fonts (Inter + Playfair), SEO metadata, theme colour
+  page.tsx                Homepage — header, hero, downstream sections, JSON-LD
+  globals.css             Design tokens + all nav/hero/section styles
+  icon.svg                Favicon (navy app-icon tile)
+  components/
+    SiteHeader.tsx        Frosted nav bar + mobile drawer (client component)
+    DoorHero.tsx          Scroll-scrub door hero + service-card carousel (client component)
+```
+
+---
+
+## To finish before / after launch
+
+- **Domain & metadata** — update `SITE_URL` in `app/layout.tsx` and the `url` in `app/page.tsx` (JSON-LD) to the live domain. Add the real NAP (name, address, phone) to the JSON-LD.
+- **Service photos** — the code points at `/public/services/*.png`. Add the six image files there (see `public/services/README.md` for exact filenames + download links). Optionally switch to `next/image` later for automatic optimization.
+- **Fonts** — Inter + Playfair are loaded via a Google Fonts `<link>`. For best Core Web Vitals, migrate to `next/font` (self-hosted).
+- **Real content** — fill in the placeholder Services / About / Certifications / Projects / Blogs / Contact sections, and wire the Contact CTA to a form or mailto.
+- **Analytics & sitemap** — add analytics and a `sitemap.ts` / `robots.ts` for SEO.
+
+---
+
+Built as part of the City Commerce Finance SEO/AEO project.

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <rect width="240" height="240" rx="52" fill="#16294F"/>
+  <g transform="translate(26.4,31.1) scale(0.78)">
+    <polygon points="116,34 30,198 100,198 116,150" fill="#fff"/>
+    <polygon points="116,150 100,198 64,198" fill="#fff"/>
+    <polygon points="124,34 210,198 140,198 124,150" fill="#fff"/>
+    <polygon points="124,150 140,198 176,198" fill="#fff"/>
+    <polygon points="120,150 101,192 120,180" fill="#fff"/>
+    <polygon points="120,150 139,192 120,180" fill="#fff"/>
+  </g>
+</svg>
