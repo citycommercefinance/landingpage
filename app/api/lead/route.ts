@@ -29,7 +29,9 @@ async function appendToSheet(row: string[]) {
   await sheets.spreadsheets.values.append({
     spreadsheetId: process.env.GOOGLE_SHEET_ID,
     range: `${SHEET_TAB}!A:H`,
-    valueInputOption: "USER_ENTERED",
+    // RAW (not USER_ENTERED) so values like "+971 …" aren't parsed as formulas,
+    // and to prevent spreadsheet formula/CSV injection from untrusted form input.
+    valueInputOption: "RAW",
     requestBody: { values: [row] },
   });
 }
