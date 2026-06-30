@@ -69,10 +69,9 @@ export default function DoorHero() {
     const doorR = q<HTMLElement>(".door.right");
     const headline = q<HTMLElement>(".headline");
     const finalEl = q<HTMLElement>(".final");
-    const hint = q<HTMLElement>(".hint");
     const progress = q<HTMLElement>(".progress");
     const cards = Array.from(hero.querySelectorAll<HTMLElement>(".card"));
-    if (!doors || !doorL || !doorR || !headline || !finalEl || !hint || !progress) return;
+    if (!doors || !doorL || !doorR || !headline || !finalEl || !progress) return;
 
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const clamp = (v: number, a: number, b: number) => Math.max(a, Math.min(b, v));
@@ -81,6 +80,16 @@ export default function DoorHero() {
     const smooth = (v: number, a: number, b: number) => {
       const t = clamp((v - a) / (b - a), 0, 1);
       return t * t * (3 - 2 * t);
+    };
+
+    // Subtle glass dots — service-navigation hint, synced to the scroll position.
+    const dotsWrap = q<HTMLElement>(".dots");
+    const dots = Array.from(hero.querySelectorAll<HTMLElement>(".dot"));
+    const cardStationP = (i: number) =>
+      0.24 + (clamp(i, 0, cards.length - 1) / (cards.length + 0.6)) * (0.97 - 0.24);
+    const scrollToCard = (i: number) => {
+      const total = hero.offsetHeight - window.innerHeight;
+      window.scrollTo({ top: hero.offsetTop + cardStationP(i) * total, behavior: "smooth" });
     };
 
     const update = () => {
@@ -96,7 +105,6 @@ export default function DoorHero() {
       doors.style.filter = `blur(${map(p, 0.05, 0.18, 0, 9)}px)`;
       doors.style.opacity = String(1 - smooth(p, 0.03, 0.19));
       headline.style.opacity = String(1 - smooth(p, 0.09, 0.19));
-      hint.style.opacity = String((1 - smooth(p, 0.04, 0.14)) * 0.85);
 
       const N = cards.length;
       const cardF = clamp((p - 0.24) / (0.97 - 0.24), 0, 1) * (N + 0.6);
@@ -115,6 +123,14 @@ export default function DoorHero() {
         el.style.pointerEvents = focused ? "auto" : "none";
         if (!focused) el.classList.remove("open");
       });
+
+      const activeCard = clamp(Math.round(cardF), 0, N - 1);
+      dots.forEach((d, i) => d.classList.toggle("active", i === activeCard));
+      if (dotsWrap) {
+        const showDots = gate > 0.6 && p < 0.9;
+        dotsWrap.style.opacity = showDots ? "1" : "0";
+        dotsWrap.style.pointerEvents = showDots ? "auto" : "none";
+      }
 
       finalEl.style.opacity = String(smooth(p, 0.93, 0.995));
       const btn = finalEl.querySelector<HTMLElement>(".btn");
@@ -161,9 +177,16 @@ export default function DoorHero() {
       });
     });
 
+    const dotHandlers = dots.map((d, i) => {
+      const h = () => scrollToCard(i);
+      d.addEventListener("click", h);
+      return h;
+    });
+
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("resize", update);
+      dots.forEach((d, i) => d.removeEventListener("click", dotHandlers[i]));
       cleanups.forEach((c) => c());
     };
   }, []);
@@ -254,8 +277,13 @@ export default function DoorHero() {
             Speak to Our Team
           </a>
         </div>
+
+        <div className="dots" role="group" aria-label="Service navigation">
+          {SERVICES.map((s) => (
+            <button key={s.title} className="dot" type="button" aria-label={`Go to ${s.title}`} />
+          ))}
+        </div>
       </div>
-      <div className="hint">Scroll to open ↓</div>
     </section>
   );
 }

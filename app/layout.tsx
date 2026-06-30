@@ -55,6 +55,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Always open at the top of the hero on load/reload — disable the browser
+            restoring a previous (deep) scroll position on this tall scroll-driven page.
+            Runs before paint so there's no jump; does not affect #fragment links. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "if('scrollRestoration' in history){history.scrollRestoration='manual';}if(!location.hash){window.scrollTo(0,0);}",
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link

@@ -118,6 +118,15 @@ a{text-decoration:none;color:inherit}
 .final .btn{display:inline-block;font-weight:600;font-size:15px;padding:15px 32px;border-radius:8px;background:var(--green-600);color:#fff;box-shadow:0 12px 28px rgba(44,122,61,.3);pointer-events:auto;
   transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s var(--ease)}
 .final .btn:hover{background:#266b35;transform:translateY(-2px);box-shadow:0 18px 38px rgba(44,122,61,.42)}
+/* subtle glass dots — service-navigation hint */
+.dots{position:absolute;left:0;right:0;bottom:30px;z-index:55;display:flex;justify-content:center;align-items:center;gap:9px;
+  opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
+.dot{width:8px;height:8px;border-radius:50%;padding:0;cursor:pointer;border:1px solid rgba(255,255,255,.32);
+  background:rgba(255,255,255,.2);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+  transition:background .25s var(--ease),transform .25s var(--ease),border-color .25s var(--ease)}
+.dot:hover{background:rgba(255,255,255,.42)}
+.dot.active{background:rgba(255,255,255,.85);border-color:rgba(255,255,255,.85);transform:scale(1.25)}
+.dot:focus-visible{outline:2px solid var(--sky-400);outline-offset:3px}
 .after{background:var(--cloud);color:var(--ink);padding:96px 24px;text-align:center;min-height:62vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
 .after.alt{background:var(--white)}
 .after h2{font-family:var(--serif);font-size:34px;color:var(--navy-900)}.after p{color:var(--slate);max-width:60ch;margin:12px auto 0;line-height:1.7}
@@ -142,6 +151,6 @@ a{text-decoration:none;color:inherit}
   .headline{position:static;margin:24px 0 40px}
   .cards{position:static;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px;max-width:1100px;margin:0 auto;padding:0 24px}
   .card{position:relative;left:auto;top:auto;transform:none!important;opacity:1!important;width:auto}
-  .hint{display:none}
+  .hint,.dots{display:none}
   .final{position:static;opacity:1!important;transform:none!important;margin:46px auto 0;pointer-events:auto}
 }
