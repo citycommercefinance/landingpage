@@ -470,3 +470,17 @@ h1 .chip,h2 .chip{margin-left:12px;transform:translateY(-3px)}
 .lf-submit-error{color:#c0392b;font-size:13px;line-height:1.5;margin:0}
 .lf-consent a{color:var(--royal-600);text-decoration:underline}
 .lf-consent a:hover{color:#1f4f7a}
+
+/* ============================================================
+   BLOG — empty / coming-soon state
+============================================================ */
+.blog-empty{background:#fff;padding:72px 24px 96px;display:flex;justify-content:center}
+.blog-empty-card{max-width:560px;text-align:center;background:var(--cloud);border:1px solid var(--mist);border-radius:18px;padding:48px 36px}
+.blog-empty-ic{display:flex;width:60px;height:60px;margin:0 auto 18px;border-radius:50%;align-items:center;justify-content:center;
+  background:rgba(93,183,52,.14);color:var(--green-600)}
+.blog-empty-ic svg{width:28px;height:28px}
+.blog-empty-card h2{font-family:var(--serif);color:var(--navy-900);font-size:1.7rem;margin-bottom:10px}
+.blog-empty-card p{color:var(--slate);line-height:1.7;margin-bottom:24px}
+.blog-empty-card .cta{display:inline-block;background:var(--green-600);color:#fff;font-weight:600;padding:13px 28px;border-radius:10px;
+  box-shadow:0 10px 24px rgba(44,122,61,.22);transition:transform .2s var(--ease),box-shadow .2s var(--ease),background .2s var(--ease)}
+.blog-empty-card .cta:hover{background:#266b35;transform:translateY(-2px);box-shadow:0 16px 32px rgba(44,122,61,.3)}

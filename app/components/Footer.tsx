@@ -25,7 +25,7 @@ export default function Footer() {
           <a href="/#about">About</a>
           <a href="/#why-us">Why Us</a>
           <a href="/#projects">Projects</a>
-          <a href="/#blogs">Blogs</a>
+          <a href="/blog">Blogs</a>
           <a href="/#contact">Contact</a>
         </nav>
 
