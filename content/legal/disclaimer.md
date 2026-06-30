@@ -52,16 +52,16 @@ To the maximum extent permitted by the applicable laws of the United Arab Emirat
 
 ## 10. Regulatory note
 
-City Commerce Finance LLC is a company established in the United Arab Emirates ‹under trade licence no. — confirm› and operates in accordance with applicable UAE laws and regulations, including anti-money-laundering (AML) and know-your-customer (KYC) requirements. ‹Confirm the firm's licensing authority and any regulatory registrations, and state them here.›
+City Commerce Finance LLC is a company established in the United Arab Emirates and operates in accordance with applicable UAE laws and regulations, including anti-money-laundering (AML) and know-your-customer (KYC) requirements.
 
 ## 11. Governing law and jurisdiction
 
-This Disclaimer, and any dispute or claim arising out of or in connection with it or the Website, are governed by the federal laws of the United Arab Emirates and are subject to the exclusive jurisdiction of the competent courts of ‹Dubai, UAE›.
+This Disclaimer, and any dispute or claim arising out of or in connection with it or the Website, are governed by the federal laws of the United Arab Emirates and are subject to the exclusive jurisdiction of the competent courts of Dubai, UAE.
 
 ## 12. Contact
 
 **City Commerce Finance LLC**
 Office No. 504, 5th Floor, Nouf Tower, Port Saeed, Deira, Dubai, UAE
-Tel: +971 4 552 5640 · Email: ‹info@citycommercefinance.com — confirm›
+Tel: +971 4 552 5640 · Email: info@citycommercefinance.com
 
 ---

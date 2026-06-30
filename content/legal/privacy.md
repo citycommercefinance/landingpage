@@ -20,11 +20,10 @@ By using the Website or submitting your information to us, you acknowledge that 
 | | |
 |---|---|
 | **Legal entity** | City Commerce Finance LLC |
-| **Trade licence no.** | ‹to confirm› |
 | **Registered address** | Office No. 504, 5th Floor, Nouf Tower, Port Saeed, Deira, Dubai, United Arab Emirates |
 | **Telephone** | +971 4 552 5640 |
-| **General email** | ‹info@citycommercefinance.com |
-| **Data protection contact / DPO** |  email — e.g. legal@citycommercefinance.com |
+| **General email** | info@citycommercefinance.com |
+| **Data protection contact / DPO** | legal@citycommercefinance.com |
 
 We act as the **Data Controller** in respect of the personal data described in this policy.
 
@@ -38,7 +37,7 @@ Depending on how you interact with us, we may collect:
 
 - **Identity & contact data** — name, job title, company, email address, telephone number and similar details you provide.
 - **Enquiry & financial-interest data** — the financing requirement you tell us about (for example service of interest, indicative amount, sector, country, preferred date) submitted through our forms or in correspondence.
-- **Know-Your-Customer (KYC) data** — where we proceed with a client relationship, identification and due-diligence information required by applicable anti-money-laundering (AML) and KYC obligations. ‹Confirm the specific KYC data categories the firm collects.›
+- **Know-Your-Customer (KYC) data** — where we proceed with a client relationship, identification and due-diligence information required by applicable anti-money-laundering (AML) and KYC obligations, such as identity documents, proof of address, company ownership details and source-of-funds information.
 - **Communications data** — the content of your messages, emails and call notes.
 - **Technical & usage data** — IP address, browser and device type, pages viewed and similar analytics data collected automatically via cookies and similar technologies (see Section 11).
 
@@ -48,7 +47,7 @@ We do not intentionally collect special-category or sensitive personal data thro
 
 - **Directly from you** — when you complete an enquiry form, call or message us, or correspond with us.
 - **Automatically** — through cookies and similar technologies when you use the Website.
-- **From third parties** — for example banks, financial institutions, business partners, KYC/AML screening providers or publicly available sources, where relevant to a transaction. ‹Confirm third-party sources used.›
+- **From third parties** — for example banks, financial institutions, business partners, KYC/AML screening providers or publicly available sources, where relevant to a transaction.
 
 ## 6. Why we use your personal data, and our lawful basis
 
@@ -90,7 +89,7 @@ We apply appropriate technical and organisational measures to protect personal d
 
 ## 11. Cookies and similar technologies
 
-The Website may use cookies and similar technologies for essential functionality, performance and analytics. Essential cookies are necessary for the site to work; non-essential cookies are used only with your consent, which you can manage or withdraw at any time via your browser settings›. ‹If Google Fonts, Google Analytics or any third-party scripts are used, list them and their purpose here.›
+The Website uses only the cookies and similar technologies needed for it to function and to keep it secure. Any non-essential cookies are used only with your consent, which you can manage or withdraw at any time via your browser settings. The Website loads **Google Fonts** (to display the Playfair Display and Inter typefaces), which involves a request to Google's servers and may expose your IP address to Google for that purpose. We do **not** currently use advertising or analytics cookies. If we introduce analytics or other third-party scripts in future, we will update this policy and, where required, ask for your consent.
 
 ## 12. Your rights under the PDPL
 
@@ -124,7 +123,7 @@ We may update this Privacy Policy from time to time. The "Last updated" date abo
 
 ## 16. Governing law
 
-This Privacy Policy and any matter relating to the processing of your personal data are governed by the federal laws of the United Arab Emirates, including the PDPL, and are subject to the jurisdiction of the competent courts of ‹Dubai, UAE›.
+This Privacy Policy and any matter relating to the processing of your personal data are governed by the federal laws of the United Arab Emirates, including the PDPL, and are subject to the jurisdiction of the competent courts of Dubai, UAE.
 
 ## 17. Contact us
 
