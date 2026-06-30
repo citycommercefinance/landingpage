@@ -35,6 +35,19 @@ export default function ReachGlobe() {
   const wrapRef = useRef<HTMLDivElement>(null);
   const globeEl = useRef<any>(null);
   const [size, setSize] = useState(0);
+  const [countries, setCountries] = useState<any[]>([]);
+
+  // load the world map (rendered as dotted continents)
+  useEffect(() => {
+    let alive = true;
+    fetch("/data/world-countries.geojson")
+      .then((r) => r.json())
+      .then((d) => alive && setCountries(d.features || []))
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   // measure container (square)
   useEffect(() => {
@@ -81,6 +94,12 @@ export default function ReachGlobe() {
           showAtmosphere
           atmosphereColor="#4DA8D0"
           atmosphereAltitude={0.16}
+          hexPolygonsData={countries}
+          hexPolygonResolution={3}
+          hexPolygonMargin={0.42}
+          hexPolygonUseDots
+          hexPolygonAltitude={0.003}
+          hexPolygonColor={() => "rgba(125,195,232,0.55)"}
           arcsData={arcs}
           arcColor={() => ["rgba(93,183,52,0.95)", "rgba(77,168,208,0.35)"]}
           arcAltitudeAutoScale={0.42}
