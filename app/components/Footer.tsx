@@ -39,7 +39,7 @@ export default function Footer() {
           <a href="/services">All services →</a>
         </nav>
 
-        <div className="ft-col">
+        <div className="ft-col ft-contact">
           <h4>Contact</h4>
           <a href="tel:+97145525640">+971 4 552 5640</a>
           <a href="mailto:info@citycommercefinance.com">info@citycommercefinance.com</a>
