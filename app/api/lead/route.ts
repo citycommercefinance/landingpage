@@ -86,14 +86,21 @@ function thankYouEmail(firstName: string): string {
 }
 
 function salesNotifyEmail(lead: Lead, when: string): string {
+  const logo = "https://citycommercefinance.com/brand/email-logo.png";
   const row = (k: string, v: string) =>
-    `<tr><td style="padding:8px 0;color:#64748b;font-size:13px;width:160px;vertical-align:top;">${k}</td><td style="padding:8px 0;color:#0f1b2d;font-size:14px;font-weight:600;">${v || "&mdash;"}</td></tr>`;
-  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"></head>
-<body style="margin:0;padding:0;background:#f5f8fa;font-family:Helvetica,Arial,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td align="center" style="padding:32px 16px;">
-  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#fff;border:1px solid #e7edf2;border-radius:12px;overflow:hidden;">
-    <tr><td style="background:#16294F;padding:20px 28px;color:#fff;font-size:16px;font-weight:700;">New website enquiry</td></tr>
-    <tr><td style="padding:24px 28px 8px;">
+    `<tr><td style="padding:9px 0;color:#64748b;font-size:13px;width:150px;vertical-align:top;border-bottom:1px solid #eef2f6;">${k}</td><td style="padding:9px 0;color:#0f1b2d;font-size:14px;font-weight:600;border-bottom:1px solid #eef2f6;">${v || "&mdash;"}</td></tr>`;
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
+<body style="margin:0;padding:0;background:#eef3f9;font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef3f9;"><tr><td align="center" style="padding:36px 16px;">
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border:1px solid #e7edf2;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(22,41,79,.08);">
+    <tr><td style="height:4px;background:linear-gradient(90deg,#2E6CA5,#5DB734);font-size:0;line-height:0;">&nbsp;</td></tr>
+    <tr><td align="center" style="padding:30px 28px 2px;">
+      <img src="${logo}" alt="City Commerce Finance" width="170" style="display:block;border:0;outline:0;width:170px;max-width:55%;height:auto;">
+    </td></tr>
+    <tr><td align="center" style="padding:10px 28px 0;">
+      <span style="display:inline-block;background:#eef6e9;color:#2C7A3D;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:999px;">New website enquiry</span>
+    </td></tr>
+    <tr><td style="padding:22px 28px 6px;">
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
         ${row("Received", when + " (GST)")}
         ${row("Name", lead.name)}
@@ -105,7 +112,7 @@ function salesNotifyEmail(lead: Lead, when: string): string {
         ${row("Country", lead.country)}
       </table>
     </td></tr>
-    <tr><td style="padding:14px 28px 26px;color:#475569;font-size:13px;line-height:1.6;">
+    <tr><td style="padding:16px 28px 30px;color:#475569;font-size:13px;line-height:1.6;">
       This lead has also been added to the leads Google Sheet. Reply to this email to respond to the prospect directly.
     </td></tr>
   </table>
