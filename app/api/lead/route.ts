@@ -56,31 +56,31 @@ function mailFrom() {
 }
 
 function thankYouEmail(firstName: string): string {
+  const logo = "https://citycommercefinance.com/brand/email-logo.png";
   return `<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#0a1626;font-family:Helvetica,Arial,sans-serif;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0a1626;"><tr><td align="center" style="padding:40px 16px;">
-  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#0f1f3d;border:1px solid rgba(255,255,255,.08);border-radius:14px;overflow:hidden;">
+<body style="margin:0;padding:0;background:#eef3f9;font-family:Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#eef3f9;"><tr><td align="center" style="padding:40px 16px;">
+  <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;background:#ffffff;border:1px solid #e7edf2;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px rgba(22,41,79,.08);">
     <tr><td style="height:4px;background:linear-gradient(90deg,#2E6CA5,#5DB734);font-size:0;line-height:0;">&nbsp;</td></tr>
-    <tr><td align="center" style="padding:44px 48px 6px;">
-      <div style="font-weight:700;font-size:22px;letter-spacing:8px;color:#ffffff;">CITY</div>
-      <div style="font-weight:700;font-size:11px;letter-spacing:5px;color:#9fb3cc;margin-top:5px;">COMMERCE FINANCE</div>
+    <tr><td align="center" style="padding:38px 48px 4px;">
+      <img src="${logo}" alt="City Commerce Finance" width="200" style="display:block;border:0;outline:0;width:200px;max-width:60%;height:auto;">
     </td></tr>
-    <tr><td style="padding:30px 48px 0;">
-      <h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:26px;color:#ffffff;">Thank you, ${firstName}.</h1>
+    <tr><td style="padding:20px 48px 0;">
+      <h1 style="margin:0;font-family:Georgia,'Times New Roman',serif;font-size:26px;color:#16294F;">Thank you, ${firstName}.</h1>
     </td></tr>
-    <tr><td style="padding:18px 48px 8px;color:#cfe0f2;font-size:15px;line-height:1.7;">
+    <tr><td style="padding:16px 48px 8px;color:#475569;font-size:15px;line-height:1.7;">
       <p style="margin:0 0 16px;">We&rsquo;ve received your enquiry, and a member of our team will be in touch shortly to discuss your financing requirement and the best route forward.</p>
-      <p style="margin:0 0 16px;">If anything is time-sensitive, reach us directly at <a href="mailto:info@citycommercefinance.com" style="color:#8fdc63;text-decoration:none;">info@citycommercefinance.com</a> or <a href="tel:+97145525640" style="color:#8fdc63;text-decoration:none;">+971 4 552 5640</a>.</p>
+      <p style="margin:0 0 16px;">If anything is time-sensitive, reach us directly at <a href="mailto:info@citycommercefinance.com" style="color:#2C7A3D;text-decoration:none;font-weight:600;">info@citycommercefinance.com</a> or <a href="tel:+97145525640" style="color:#2C7A3D;text-decoration:none;font-weight:600;">+971 4 552 5640</a>.</p>
     </td></tr>
-    <tr><td style="padding:14px 48px 44px;">
-      <div style="width:40px;height:1px;background:rgba(255,255,255,.25);margin:0 0 18px;font-size:0;line-height:0;">&nbsp;</div>
-      <p style="margin:0;color:#ffffff;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:16px;">The City Commerce Finance Team</p>
-      <p style="margin:4px 0 0;color:#9fb3cc;font-size:13px;">Trade &amp; Shariah-compliant finance &middot; Dubai, UAE</p>
+    <tr><td style="padding:14px 48px 40px;">
+      <div style="width:42px;height:2px;background:#5DB734;margin:0 0 18px;font-size:0;line-height:0;">&nbsp;</div>
+      <p style="margin:0;color:#16294F;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:16px;">The City Commerce Finance Team</p>
+      <p style="margin:4px 0 0;color:#64748b;font-size:13px;">Trade &amp; Shariah-compliant finance &middot; Dubai, UAE</p>
     </td></tr>
   </table>
   <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;"><tr>
-    <td align="center" style="padding:20px;color:#5b6b82;font-size:12px;line-height:1.6;">
-      You&rsquo;re receiving this because you submitted an enquiry at <a href="https://citycommercefinance.com" style="color:#5b6b82;">citycommercefinance.com</a>.
+    <td align="center" style="padding:20px;color:#94a3b8;font-size:12px;line-height:1.6;">
+      You&rsquo;re receiving this because you submitted an enquiry at <a href="https://citycommercefinance.com" style="color:#94a3b8;">citycommercefinance.com</a>.
     </td></tr></table>
 </td></tr></table></body></html>`;
 }
