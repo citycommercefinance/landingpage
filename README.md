@@ -52,14 +52,28 @@ Every `git push` to `main` auto-deploys.
 
 ```
 app/
-  layout.tsx              Root layout — fonts (Inter + Playfair), SEO metadata, theme colour
-  page.tsx                Homepage — header, hero, downstream sections, JSON-LD
-  globals.css             Design tokens + all nav/hero/section styles
-  icon.svg                Favicon (navy app-icon tile)
+  layout.tsx                  Root layout — fonts (Inter + Playfair), SEO metadata, theme colour
+  page.tsx                    Homepage — hero, services overview, sections, footer, JSON-LD
+  globals.css                 Design tokens + all styles
+  icon.svg                    Favicon (navy app-icon tile)
+  lib/
+    services.ts               Single source of truth for all services (copy, FAQs, slugs)
+  services/
+    page.tsx                  /services index — flagship grid + full range + ItemList schema
+    [slug]/page.tsx           Dynamic per-service page (Service + FAQPage schema, generateStaticParams)
   components/
-    SiteHeader.tsx        Frosted nav bar + mobile drawer (client component)
-    DoorHero.tsx          Scroll-scrub door hero + service-card carousel (client component)
+    SiteHeader.tsx            Frosted nav bar + mobile drawer (client)
+    DoorHero.tsx              Scroll-scrub door hero + card carousel (client)
+    ServicesOverview.tsx      Homepage services section
+    Footer.tsx                Site footer (navy, NAP, quick links)
+public/
+  services/                   Service photos go here (see public/services/README.md)
 ```
+
+**Services architecture:** all services live in `app/lib/services.ts`. The 6 flagship services
+have full copy + FAQs; the other 16 use a concise template. Every service is prerendered as a
+static page at `/services/<slug>`. To add full copy to an additional service, just fill in its
+`sections` and `faqs` in that one file.
 
 ---
 

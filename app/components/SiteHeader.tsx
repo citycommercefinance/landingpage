@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const NAV = [
-  { label: "Home", href: "#", current: true },
-  { label: "Services", href: "#services" },
-  { label: "About", href: "#about" },
-  { label: "Certifications", href: "#certifications" },
-  { label: "Projects", href: "#projects" },
-  { label: "Blogs", href: "#blogs" },
+  { label: "Home", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "About", href: "/#about" },
+  { label: "Why Us", href: "/#why-us" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Blogs", href: "/#blogs" },
 ];
 
 function MarkWhite() {
@@ -49,21 +50,27 @@ function MarkColour() {
   );
 }
 
-export default function SiteHeader() {
-  const [scrolled, setScrolled] = useState(false);
+// `solid` = always frosted (use on pages without the dark hero behind the bar).
+export default function SiteHeader({ solid = false }: { solid?: boolean }) {
+  const [scrolled, setScrolled] = useState(solid);
   const [open, setOpen] = useState(false);
   const drawerRef = useRef<HTMLDivElement>(null);
   const toggleRef = useRef<HTMLButtonElement>(null);
+  const pathname = usePathname();
 
-  // Frost the bar as soon as scrolling begins.
+  const isCurrent = (href: string) => {
+    if (href === "/") return pathname === "/";
+    if (href.startsWith("/services")) return pathname.startsWith("/services");
+    return false;
+  };
+
   useEffect(() => {
-    const onScroll = () => setScrolled((window.scrollY || 0) > 24);
+    const onScroll = () => setScrolled(solid || (window.scrollY || 0) > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  }, [solid]);
 
-  // Lock body scroll + focus management + Escape to close while the drawer is open.
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     if (open) drawerRef.current?.querySelector("a")?.focus();
@@ -81,7 +88,7 @@ export default function SiteHeader() {
     <>
       <header className={`site-header${scrolled ? " scrolled" : ""}`}>
         <div className="nav-wrap">
-          <a className="brand" href="#" aria-label="City Commerce Finance — home">
+          <a className="brand" href="/" aria-label="City Commerce Finance — home">
             <MarkWhite />
             <MarkColour />
             <span className="wordmark">
@@ -92,13 +99,13 @@ export default function SiteHeader() {
 
           <nav className="nav-links" aria-label="Primary">
             {NAV.map((n) => (
-              <a key={n.label} href={n.href} aria-current={n.current ? "page" : undefined}>
+              <a key={n.label} href={n.href} aria-current={isCurrent(n.href) ? "page" : undefined}>
                 {n.label}
               </a>
             ))}
           </nav>
 
-          <a className="nav-cta" href="#contact">
+          <a className="nav-cta" href="/#contact">
             Contact Us
           </a>
 
@@ -117,11 +124,7 @@ export default function SiteHeader() {
         </div>
       </header>
 
-      <div
-        className={`scrim${open ? " open" : ""}`}
-        onClick={() => setOpen(false)}
-        aria-hidden="true"
-      />
+      <div className={`scrim${open ? " open" : ""}`} onClick={() => setOpen(false)} aria-hidden="true" />
 
       <aside
         ref={drawerRef}
@@ -147,13 +150,13 @@ export default function SiteHeader() {
           <a
             key={n.label}
             href={n.href}
-            aria-current={n.current ? "page" : undefined}
+            aria-current={isCurrent(n.href) ? "page" : undefined}
             onClick={() => setOpen(false)}
           >
             {n.label}
           </a>
         ))}
-        <a className="nav-cta" href="#contact" onClick={() => setOpen(false)}>
+        <a className="nav-cta" href="/#contact" onClick={() => setOpen(false)}>
           Contact Us
         </a>
       </aside>
