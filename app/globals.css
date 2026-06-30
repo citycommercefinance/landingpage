@@ -87,7 +87,9 @@ a{text-decoration:none;color:inherit}
 .door svg{display:block;height:300px;width:auto;filter:drop-shadow(0 18px 36px rgba(0,0,0,.4))}
 .door.left{transform-origin:left center}.door.right{transform-origin:right center;margin-left:-2px}
 .headline{position:absolute;left:0;right:0;top:60%;text-align:center;z-index:31;padding:0 24px;will-change:opacity;pointer-events:none}
-.headline .firm{display:block;color:#fff;font-family:var(--sans);font-weight:700;letter-spacing:.2em;text-transform:uppercase;font-size:clamp(13px,1.7vw,18px);margin-bottom:14px;opacity:.95}
+.headline .firm{display:flex;flex-direction:column;align-items:center;gap:5px;color:#fff;font-family:var(--sans);text-transform:uppercase;margin-bottom:16px;opacity:.95}
+.headline .firm-l1{font-weight:700;font-size:clamp(16px,2.1vw,24px);letter-spacing:.3em;text-indent:.3em;line-height:1}
+.headline .firm-l2{font-weight:700;font-size:clamp(9px,1.15vw,12px);letter-spacing:.24em;text-indent:.24em;color:#cfe0f2;line-height:1}
 .headline .statement{display:block;color:#fff;font-family:var(--serif);font-style:italic;font-weight:600;font-size:clamp(24px,4vw,48px)}
 .cards{position:absolute;inset:0;transform-style:preserve-3d;z-index:20}
 .card{position:absolute;left:50%;top:48%;width:min(440px,86vw);transform:translate(-50%,-50%);
@@ -139,7 +141,7 @@ a{text-decoration:none;color:inherit}
 @media (max-width:700px){
   .door svg{height:200px}
   .headline{top:58%}
-  .headline .firm{font-size:12px;letter-spacing:.16em;margin-bottom:10px}
+  .headline .firm{margin-bottom:12px}
   .headline .statement{font-size:clamp(22px,6.5vw,32px)}
   .card .photo{height:178px}
   .card .bar{padding:15px 20px}.card .bar h3{font-size:19px}

@@ -263,7 +263,10 @@ export default function DoorHero() {
         </div>
 
         <div className="headline">
-          <span className="firm">City Commerce Finance</span>
+          <span className="firm">
+            <span className="firm-l1">City</span>
+            <span className="firm-l2">Commerce Finance</span>
+          </span>
           <span className="statement">Open the door to endless possibilities</span>
         </div>
 
