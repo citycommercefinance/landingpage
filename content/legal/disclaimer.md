@@ -60,8 +60,9 @@ This Disclaimer, and any dispute or claim arising out of or in connection with i
 
 ## 12. Contact
 
-**City Commerce Finance LLC**
-Office No. 504, 5th Floor, Nouf Tower, Port Saeed, Deira, Dubai, UAE
-Tel: +971 4 552 5640 · Email: info@citycommercefinance.com
+**City Commerce Finance LLC**<br>
+Office No. 504, 5th Floor, Nouf Tower, Port Saeed, Deira, Dubai, UAE<br>
+Tel: [+971 4 552 5640](tel:+97145525640)<br>
+Email: [info@citycommercefinance.com](mailto:info@citycommercefinance.com)
 
 ---

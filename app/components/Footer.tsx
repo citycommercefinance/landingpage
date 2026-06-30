@@ -6,14 +6,8 @@ export default function Footer() {
       <div className="ft-wrap">
         <div className="ft-brand">
           <div className="ft-logo">
-            <svg viewBox="0 0 240 230" aria-hidden="true" width="40" height="38">
-              <polygon points="116,34 30,198 100,198 116,150" fill="#fff" />
-              <polygon points="116,150 100,198 64,198" fill="#fff" />
-              <polygon points="124,34 210,198 140,198 124,150" fill="#fff" />
-              <polygon points="124,150 140,198 176,198" fill="#fff" />
-              <polygon points="120,150 101,192 120,180" fill="#fff" />
-              <polygon points="120,150 139,192 120,180" fill="#fff" />
-            </svg>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="ft-mark" src="/brand/mark/mark-colour.svg" alt="" width="42" height="40" />
             <span>
               <strong>CITY COMMERCE FINANCE</strong>
               <em>The Home of Endless Possibilities</em>

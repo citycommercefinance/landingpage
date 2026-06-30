@@ -129,9 +129,10 @@ This Privacy Policy and any matter relating to the processing of your personal d
 
 For any questions about this Privacy Policy or your personal data, contact:
 
-**City Commerce Finance LLC** — 
-Office No. 504, 5th Floor, Nouf Tower, Port Saeed, Deira, Dubai, UAE
-Tel: +971 4 552 5640 · Email: legal@citycommercefinance.com.
+**City Commerce Finance LLC**<br>
+Office No. 504, 5th Floor, Nouf Tower, Port Saeed, Deira, Dubai, UAE<br>
+Tel: [+971 4 552 5640](tel:+97145525640)<br>
+Email: [legal@citycommercefinance.com](mailto:legal@citycommercefinance.com)
 
 ---
 

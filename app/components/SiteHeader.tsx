@@ -9,7 +9,6 @@ const NAV = [
   { label: "About", href: "/#about" },
   { label: "Why Us", href: "/#why-us" },
   { label: "Projects", href: "/#projects" },
-  { label: "Blogs", href: "/#blogs" },
 ];
 
 function MarkWhite() {

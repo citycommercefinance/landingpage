@@ -52,13 +52,6 @@ export default function Home() {
             delivery at scale.
           </p>
         </section>
-        <section className="after" id="blogs">
-          <h2>Blogs & Insights</h2>
-          <p>
-            SEO/AEO-optimized articles that answer the questions your clients are asking — built to
-            grow organic and answer-engine visibility.
-          </p>
-        </section>
         <section className="contact" id="contact">
           <div className="contact-grid">
             <div className="contact-info">
