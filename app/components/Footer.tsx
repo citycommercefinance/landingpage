@@ -57,6 +57,10 @@ export default function Footer() {
 
       <div className="ft-bottom">
         <span>© {new Date().getFullYear()} City Commerce Finance LLC — UAE. All rights reserved.</span>
+        <nav className="ft-legal" aria-label="Legal">
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/disclaimer">Disclaimer</a>
+        </nav>
       </div>
     </footer>
   );

@@ -272,7 +272,10 @@ export default function LeadForm() {
       </button>
       {submitError && <p className="lf-submit-error" role="alert">{submitError}</p>}
       <p className="lf-consent">
-        By submitting, you agree to be contacted about your enquiry. We respect your privacy and never share your details.
+        By submitting, you agree to be contacted about your enquiry and to our{" "}
+        <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> and{" "}
+        <a href="/disclaimer" target="_blank" rel="noopener noreferrer">Disclaimer</a>. We respect
+        your privacy and never share your details.
       </p>
     </form>
   );
