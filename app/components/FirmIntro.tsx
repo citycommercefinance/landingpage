@@ -65,15 +65,35 @@ export default function FirmIntro() {
             <a className="btn-primary" href="/services">
               Explore our services
             </a>
-            <a className="btn-ghost" href="/about/masiar-rahaman">
-              Meet our founder →
-            </a>
           </div>
         </div>
 
         <div className="reach" aria-hidden="true">
           {showGlobe ? <ReachGlobe /> : <div className="globe-skeleton" />}
           <p className="reach-caption">Connecting the UAE to clients across the globe — drag to explore</p>
+        </div>
+      </div>
+
+      <div className="founder-brief">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          className="fb-photo"
+          src="/team/founder-masiar-square.webp"
+          alt="Masiar Rahaman, Founder of City Commerce Finance"
+          width={128}
+          height={128}
+          loading="lazy"
+        />
+        <div className="fb-body">
+          <p className="eyebrow">Our founder</p>
+          <h3>Masiar Rahaman</h3>
+          <p className="fb-role">Founder, City Commerce Finance LLC</p>
+          <p className="fb-bio">
+            A double-MBA in Banking &amp; Finance and Islamic Banking, Masiar leads City Commerce
+            Finance&rsquo;s trade and Shariah-compliant advisory in Dubai &mdash; and writes the firm&rsquo;s
+            insights on how these instruments actually work.
+          </p>
+          <a href="/about/masiar-rahaman">Read his full profile &rarr;</a>
         </div>
       </div>
     </section>
