@@ -16,19 +16,20 @@ function Rolling({ value, play }: { value: number; play: boolean }) {
   return (
     <span className="roll">
       {digits.map((d, i) => (
-        <span
-          key={i}
-          className="roll-col"
-          style={{
-            transitionDelay: `${i * 120}ms`,
-            transform: play ? `translateY(-${20 + Number(d)}em)` : "translateY(0)",
-          }}
-        >
-          {Array.from({ length: 30 }).map((_, n) => (
-            <span className="roll-d" key={n}>
-              {n % 10}
-            </span>
-          ))}
+        <span key={i} className="roll-col">
+          <span
+            className="roll-stack"
+            style={{
+              transitionDelay: `${i * 120}ms`,
+              transform: play ? `translateY(-${20 + Number(d)}em)` : "translateY(0)",
+            }}
+          >
+            {Array.from({ length: 30 }).map((_, n) => (
+              <span className="roll-d" key={n}>
+                {n % 10}
+              </span>
+            ))}
+          </span>
         </span>
       ))}
     </span>
