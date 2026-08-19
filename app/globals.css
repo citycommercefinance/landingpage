@@ -310,8 +310,8 @@ h1 .chip,h2 .chip{margin-left:12px;transform:translateY(-3px)}
 .hero2-trust li::before{content:"✓";position:absolute;left:0;top:-1px;color:#8fdc63;font-weight:700}
 .hero2-visual{width:100%}
 .hero2 .globe-wrap{isolation:isolate}
-.hero2 .globe-wrap::before{content:"";position:absolute;inset:-8%;border-radius:50%;z-index:0;
-  background:radial-gradient(circle at 50% 48%,rgba(143,208,245,.28),rgba(143,208,245,.08) 55%,rgba(143,208,245,0) 70%);filter:blur(8px)}
+.hero2 .globe-wrap::before{content:"";position:absolute;inset:-4%;border-radius:50%;z-index:0;
+  background:radial-gradient(circle at 50% 48%,rgba(143,208,245,.14),rgba(143,208,245,.04) 52%,rgba(143,208,245,0) 68%);filter:blur(6px)}
 .hero2 .globe-wrap>*{position:relative;z-index:1}
 @media (max-width:900px){
   .hero2-grid{grid-template-columns:1fr;gap:30px;min-height:auto;text-align:left}

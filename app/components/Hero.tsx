@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 
 const ReachGlobe = dynamic(() => import("./ReachGlobe"), {
   ssr: false,
@@ -8,6 +9,18 @@ const ReachGlobe = dynamic(() => import("./ReachGlobe"), {
 });
 
 export default function Hero() {
+  // Only mount the WebGL globe on larger screens. On phones it stays out of the
+  // DOM entirely, so the heavy three.js / globe bundle is never downloaded.
+  const [showGlobe, setShowGlobe] = useState(false);
+
+  useEffect(() => {
+    const mql = window.matchMedia("(min-width: 901px)");
+    const update = () => setShowGlobe(mql.matches);
+    update();
+    mql.addEventListener("change", update);
+    return () => mql.removeEventListener("change", update);
+  }, []);
+
   return (
     <section className="hero2">
       <div className="hero2-grid">
@@ -29,9 +42,11 @@ export default function Hero() {
           </ul>
         </div>
 
-        <div className="reach hero2-visual" aria-hidden="true">
-          <ReachGlobe />
-        </div>
+        {showGlobe && (
+          <div className="reach hero2-visual" aria-hidden="true">
+            <ReachGlobe />
+          </div>
+        )}
       </div>
     </section>
   );

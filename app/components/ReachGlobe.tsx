@@ -77,7 +77,7 @@ export default function ReachGlobe() {
   const globeMaterial = new THREE.MeshPhongMaterial({
     color: "#f3f7fc",
     emissive: "#cdd9e6",
-    emissiveIntensity: 0.55,
+    emissiveIntensity: 0.38,
     shininess: 8,
   });
 
@@ -93,7 +93,7 @@ export default function ReachGlobe() {
           globeMaterial={globeMaterial}
           showAtmosphere
           atmosphereColor="#8fd0f5"
-          atmosphereAltitude={0.18}
+          atmosphereAltitude={0.1}
           hexPolygonsData={countries}
           hexPolygonResolution={3}
           hexPolygonMargin={0.42}
