@@ -10,6 +10,9 @@ const STATS: Stat[] = [
   { value: 950, prefix: "US$", suffix: "M+", label: "Total deal value" },
 ];
 
+// Digit cell height in em. MUST match .roll-col / .roll-d height in globals.css.
+const CELL = 1.3;
+
 // One rolling digit column per digit — spins through 3 cycles and settles (slot-machine feel).
 function Rolling({ value, play }: { value: number; play: boolean }) {
   const digits = String(value).split("");
@@ -21,7 +24,7 @@ function Rolling({ value, play }: { value: number; play: boolean }) {
             className="roll-stack"
             style={{
               transitionDelay: `${i * 120}ms`,
-              transform: play ? `translateY(-${20 + Number(d)}em)` : "translateY(0)",
+              transform: play ? `translateY(-${(20 + Number(d)) * CELL}em)` : "translateY(0)",
             }}
           >
             {Array.from({ length: 30 }).map((_, n) => (
