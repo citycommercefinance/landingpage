@@ -57,9 +57,7 @@
 
 /* founder page */
 .founder { background: #fff; padding: 44px 24px 84px; }
-.founder-grid { display: grid; gap: clamp(1.5rem, 4vw, 3rem); grid-template-columns: minmax(260px, 380px) 1fr; align-items: start; max-width: 1120px; margin: 0 auto; }
-.founder-photo { margin: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--mist); box-shadow: 0 30px 70px -40px rgba(22,41,79,.5); }
-.founder-photo img { width: 100%; height: auto; display: block; }
+.founder-grid { display: grid; gap: clamp(1.5rem, 4vw, 3rem); grid-template-columns: 1fr; align-items: start; max-width: 760px; margin: 0 auto; }
 .founder-copy .lead { color: var(--navy-900); }
 .founder-copy p { color: #26364a; line-height: 1.75; margin: 0 0 1.05rem; }
 .cred-list { list-style: none; margin: 1.4rem 0; padding: 0; display: grid; gap: .85rem; }
@@ -70,5 +68,4 @@
 
 @media (max-width: 780px) {
   .founder-grid { grid-template-columns: 1fr; }
-  .founder-photo { max-width: 340px; }
 }

@@ -17,7 +17,6 @@ export const metadata: Metadata = {
     url: "/about/masiar-rahaman",
     title: `${NAME} — Founder, City Commerce Finance`,
     description: "Founder of City Commerce Finance LLC, Dubai. Double-MBA in Banking & Finance and Islamic Banking.",
-    images: ["/team/founder-masiar-og.jpg"],
   },
 };
 
@@ -26,7 +25,6 @@ const personLd = {
   "@type": "Person",
   name: NAME,
   jobTitle: "Founder",
-  image: `${SITE}/team/founder-masiar.jpg`,
   url: `${SITE}/about/masiar-rahaman`,
   worksFor: { "@type": "Organization", name: "City Commerce Finance LLC", url: SITE },
   alumniOf: [
@@ -67,14 +65,6 @@ export default function FounderPage() {
 
       <main className="founder">
         <div className="founder-grid">
-          <figure className="founder-photo">
-            <picture>
-              <source srcSet="/team/founder-masiar.webp" type="image/webp" />
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/team/founder-masiar.jpg" alt={`${NAME}, Founder of City Commerce Finance`} width={1280} height={1583} />
-            </picture>
-          </figure>
-
           <div className="founder-copy">
             <p className="lead">
               Masiar Rahaman founded City Commerce Finance to give UAE businesses a clearer, more

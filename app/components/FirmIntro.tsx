@@ -1,12 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
-
-const ReachGlobe = dynamic(() => import("./ReachGlobe"), {
-  ssr: false,
-  loading: () => <div className="globe-skeleton" aria-hidden="true" />,
-});
+import { useEffect, useRef } from "react";
 
 const POINTS: [string, string][] = [
   ["Tailored solutions", "Structured around your goals."],
@@ -17,22 +11,18 @@ const POINTS: [string, string][] = [
 
 export default function FirmIntro() {
   const ref = useRef<HTMLElement>(null);
-  const [showGlobe, setShowGlobe] = useState(false);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       el.classList.add("reveal-in");
-      setShowGlobe(true);
       return;
     }
     const io = new IntersectionObserver(
       (entries) => entries.forEach((e) => {
         if (e.isIntersecting) {
           el.classList.add("reveal-in");
-          setShowGlobe(true);
           io.disconnect();
         }
       }),
@@ -68,32 +58,18 @@ export default function FirmIntro() {
           </div>
         </div>
 
-        <div className="reach" aria-hidden="true">
-          {showGlobe ? <ReachGlobe /> : <div className="globe-skeleton" />}
-          <p className="reach-caption">Connecting the UAE to clients across the globe — drag to explore</p>
-        </div>
-      </div>
-
-      <div className="founder-brief">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          className="fb-photo"
-          src="/team/founder-masiar-square.webp"
-          alt="Masiar Rahaman, Founder of City Commerce Finance"
-          width={128}
-          height={128}
-          loading="lazy"
-        />
-        <div className="fb-body">
-          <p className="eyebrow">Our founder</p>
-          <h3>Masiar Rahaman</h3>
-          <p className="fb-role">Founder, City Commerce Finance LLC</p>
-          <p className="fb-bio">
-            A double-MBA in Banking &amp; Finance and Islamic Banking, Masiar leads City Commerce
-            Finance&rsquo;s trade and Shariah-compliant advisory in Dubai.
-          </p>
-          <a href="/about/masiar-rahaman">Read his full profile &rarr;</a>
-        </div>
+        <aside className="founder-brief">
+          <div className="fb-body">
+            <p className="eyebrow">Our founder</p>
+            <h3>Masiar Rahaman</h3>
+            <p className="fb-role">Founder, City Commerce Finance LLC</p>
+            <p className="fb-bio">
+              A double-MBA in Banking &amp; Finance and Islamic Banking, Masiar leads City Commerce
+              Finance&rsquo;s trade and Shariah-compliant advisory in Dubai.
+            </p>
+            <a href="/about/masiar-rahaman">Read his full profile &rarr;</a>
+          </div>
+        </aside>
       </div>
     </section>
   );

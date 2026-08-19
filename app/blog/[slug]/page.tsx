@@ -115,8 +115,6 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
         <div className="legal-inner" dangerouslySetInnerHTML={{ __html: html }} />
 
         <aside className="author-box">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/team/founder-masiar-square.webp" alt={meta.authorName} width={84} height={84} loading="lazy" />
           <div>
             <p className="ab-name">{meta.authorName}</p>
             <p className="ab-role">{meta.authorRole}</p>

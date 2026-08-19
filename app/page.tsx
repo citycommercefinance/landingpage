@@ -1,5 +1,5 @@
 import SiteHeader from "./components/SiteHeader";
-import DoorHero from "./components/DoorHero";
+import Hero from "./components/Hero";
 import FirmIntro from "./components/FirmIntro";
 import WhyUs from "./components/WhyUs";
 import Stats from "./components/Stats";
@@ -39,7 +39,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SiteHeader />
-      <DoorHero />
+      <Hero />
 
       <main>
         <FirmIntro />

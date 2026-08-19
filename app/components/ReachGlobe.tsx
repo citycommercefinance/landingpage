@@ -18,8 +18,8 @@ const CITIES = [
 ];
 
 const points = [
-  { lat: DUBAI.lat, lng: DUBAI.lng, color: "#5DB734", r: 0.85 },
-  ...CITIES.map((c) => ({ lat: c.lat, lng: c.lng, color: "#7Fc3e8", r: 0.5 })),
+  { lat: DUBAI.lat, lng: DUBAI.lng, color: "#5DB734", r: 0.9 },
+  ...CITIES.map((c) => ({ lat: c.lat, lng: c.lng, color: "#16294F", r: 0.6 })),
 ];
 
 const arcs = CITIES.map((c) => ({
@@ -75,10 +75,10 @@ export default function ReachGlobe() {
   }, [size]);
 
   const globeMaterial = new THREE.MeshPhongMaterial({
-    color: "#16294F",
-    emissive: "#0c1c33",
-    emissiveIntensity: 0.9,
-    shininess: 6,
+    color: "#f3f7fc",
+    emissive: "#cdd9e6",
+    emissiveIntensity: 0.55,
+    shininess: 8,
   });
 
   return (
@@ -92,14 +92,14 @@ export default function ReachGlobe() {
           showGlobe
           globeMaterial={globeMaterial}
           showAtmosphere
-          atmosphereColor="#4DA8D0"
-          atmosphereAltitude={0.16}
+          atmosphereColor="#8fd0f5"
+          atmosphereAltitude={0.18}
           hexPolygonsData={countries}
           hexPolygonResolution={3}
           hexPolygonMargin={0.42}
           hexPolygonUseDots
           hexPolygonAltitude={0.003}
-          hexPolygonColor={() => "rgba(125,195,232,0.55)"}
+          hexPolygonColor={() => "rgba(46,108,165,0.78)"}
           arcsData={arcs}
           arcColor={() => ["rgba(93,183,52,0.95)", "rgba(77,168,208,0.35)"]}
           arcAltitudeAutoScale={0.42}
