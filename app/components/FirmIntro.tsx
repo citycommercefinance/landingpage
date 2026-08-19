@@ -90,8 +90,7 @@ export default function FirmIntro() {
           <p className="fb-role">Founder, City Commerce Finance LLC</p>
           <p className="fb-bio">
             A double-MBA in Banking &amp; Finance and Islamic Banking, Masiar leads City Commerce
-            Finance&rsquo;s trade and Shariah-compliant advisory in Dubai &mdash; and writes the firm&rsquo;s
-            insights on how these instruments actually work.
+            Finance&rsquo;s trade and Shariah-compliant advisory in Dubai.
           </p>
           <a href="/about/masiar-rahaman">Read his full profile &rarr;</a>
         </div>
