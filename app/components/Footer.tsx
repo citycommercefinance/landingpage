@@ -44,7 +44,9 @@ export default function Footer() {
           <a href="tel:+97145525640">+971 4 552 5640</a>
           <a href="mailto:info@citycommercefinance.com">info@citycommercefinance.com</a>
           <p className="ft-addr">
-            Office No. 504, 5th Floor, Nouf Tower, Port Saeed, Deira, Dubai, UAE
+            <a href="https://maps.app.goo.gl/5LiSD85yEKU3bzoY7?g_st=ic" target="_blank" rel="noopener noreferrer">
+              Office No. 504, 5th Floor, Nouf Tower, Port Saeed, Deira, Dubai, UAE
+            </a>
           </p>
         </div>
       </div>

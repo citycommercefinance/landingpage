@@ -88,7 +88,7 @@ export default function Home() {
                   </span>
                   <span>
                     <span className="cp-label">Visit</span>
-                    <span className="cp-val">Office 504, Nouf Tower, Port Saeed, Deira, Dubai, UAE</span>
+                    <a className="cp-val" href="https://maps.app.goo.gl/5LiSD85yEKU3bzoY7?g_st=ic" target="_blank" rel="noopener noreferrer">Office 504, Nouf Tower, Port Saeed, Deira, Dubai, UAE</a>
                   </span>
                 </li>
               </ul>
