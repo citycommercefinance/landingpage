@@ -507,3 +507,20 @@ h1 .chip,h2 .chip{margin-left:12px;transform:translateY(-3px)}
 .founder-brief a{color:var(--royal-600);font-weight:600;font-size:.92rem;text-decoration:none}
 .founder-brief a:hover{text-decoration:underline}
 @media(max-width:640px){.founder-brief{flex-direction:column;text-align:center}.founder-brief .fb-bio{text-align:left}}
+
+/* Track-record stats band (slot-machine rolling counters) */
+.stats-band{background:linear-gradient(180deg,#16294F 0%,#0f1f3d 100%);color:#fff;padding:74px 24px;text-align:center;overflow:hidden}
+.stats-inner{max-width:1120px;margin:0 auto}
+.stats-band .eyebrow.light{color:#7fd0f2}
+.stats-band h2{font-family:var(--serif);font-size:clamp(1.6rem,3.2vw,2.3rem);color:#fff;font-weight:600;margin:6px 0 44px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+.stat-num{font-family:var(--serif);font-weight:700;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1;
+  display:inline-flex;align-items:center;justify-content:center;gap:.04em;color:#eaf3fb;
+  background:linear-gradient(180deg,#f2f8fd,#93c9ea);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.stat-affix{font-size:.5em;color:var(--green-500);-webkit-text-fill-color:var(--green-500);font-weight:700}
+.stat-label{margin-top:14px;color:#cfe0f2;font-size:.98rem;line-height:1.4;max-width:22ch;margin-inline:auto}
+.roll{display:inline-flex}
+.roll-col{display:inline-flex;flex-direction:column;height:1em;overflow:hidden;transition:transform 1.8s cubic-bezier(.15,.85,.25,1)}
+.roll-d{height:1em;display:flex;align-items:center;justify-content:center}
+@media (prefers-reduced-motion: reduce){.roll-col{transition:none}}
+@media(max-width:720px){.stats-grid{grid-template-columns:1fr;gap:30px}}

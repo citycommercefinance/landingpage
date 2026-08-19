@@ -2,6 +2,7 @@ import SiteHeader from "./components/SiteHeader";
 import DoorHero from "./components/DoorHero";
 import FirmIntro from "./components/FirmIntro";
 import WhyUs from "./components/WhyUs";
+import Stats from "./components/Stats";
 import LeadForm from "./components/LeadForm";
 import Footer from "./components/Footer";
 
@@ -45,13 +46,7 @@ export default function Home() {
 
         <WhyUs />
 
-        <section className="after alt" id="projects">
-          <h2>Projects</h2>
-          <p>
-            Selected client mandates across trade finance, project finance and real estate — proof of
-            delivery at scale.
-          </p>
-        </section>
+        <Stats />
         <section className="contact" id="contact">
           <div className="contact-grid">
             <div className="contact-info">
