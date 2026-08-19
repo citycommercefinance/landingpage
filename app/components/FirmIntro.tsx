@@ -65,6 +65,9 @@ export default function FirmIntro() {
             <a className="btn-primary" href="/services">
               Explore our services
             </a>
+            <a className="btn-ghost" href="/about/masiar-rahaman">
+              Meet our founder →
+            </a>
           </div>
         </div>
 

@@ -9,6 +9,7 @@ const NAV = [
   { label: "About", href: "/#about" },
   { label: "Why Us", href: "/#why-us" },
   { label: "Projects", href: "/#projects" },
+  { label: "Blog", href: "/blog" },
 ];
 
 function MarkWhite() {
@@ -60,6 +61,7 @@ export default function SiteHeader({ solid = false }: { solid?: boolean }) {
   const isCurrent = (href: string) => {
     if (href === "/") return pathname === "/";
     if (href.startsWith("/services")) return pathname.startsWith("/services");
+    if (href.startsWith("/blog")) return pathname.startsWith("/blog");
     return false;
   };
 
