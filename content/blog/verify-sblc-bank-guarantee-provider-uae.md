@@ -1,7 +1,8 @@
 ---
 title: "How to Verify an SBLC or Bank Guarantee Provider Before You Pay a Dirham"
+seoTitle: "How to Verify an SBLC or Bank Guarantee Provider"
 slug: "verify-sblc-bank-guarantee-provider-uae"
-description: "A UAE business owner's due-diligence guide to checking whether a bank guarantee or SBLC provider is real — the registers to search, the wording that gives fraud away, and why no instrument is ever 'leased'."
+description: "A UAE due-diligence guide to checking a bank guarantee or SBLC provider is real: the registers to search and the wording that signals fraud."
 category: "Trade Finance"
 publishedAt: "2026-08-14"
 updatedAt: "2026-08-14"

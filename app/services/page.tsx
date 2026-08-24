@@ -17,7 +17,7 @@ const itemListLd = {
     "@type": "ListItem",
     position: i + 1,
     name: s.title,
-    url: `https://www.citycommercefinance.com/services/${s.slug}`,
+    url: `https://citycommercefinance.com/services/${s.slug}`,
   })),
 };
 

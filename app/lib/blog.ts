@@ -7,6 +7,7 @@ const BLOG_DIR = path.join(process.cwd(), "content/blog");
 export type PostMeta = {
   slug: string;
   title: string;
+  seoTitle: string;
   description: string;
   category: string;
   publishedAt: string;
@@ -46,6 +47,7 @@ function toMeta(slug: string, d: Record<string, string>): PostMeta {
   return {
     slug: d.slug || slug,
     title: d.title || slug,
+    seoTitle: d.seoTitle || d.title || slug,
     description: d.description || "",
     category: d.category || "Insights",
     publishedAt: d.publishedAt || "",

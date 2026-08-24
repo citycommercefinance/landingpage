@@ -1,7 +1,8 @@
 ---
 title: "Letter of Credit vs Bank Guarantee vs SBLC: Which One Does Your Deal Need?"
+seoTitle: "LC vs Bank Guarantee vs SBLC: Which Do You Need?"
 slug: "letter-of-credit-vs-bank-guarantee-vs-sblc-uae"
-description: "A UAE decision guide to the three core trade finance instruments — what triggers payment under each, which rulebook governs it, what it costs, and how to choose."
+description: "A UAE guide to the three core trade finance instruments: what triggers payment under each, which rules govern it, and how to choose."
 category: "Trade Finance"
 publishedAt: "2026-08-14"
 updatedAt: "2026-08-14"

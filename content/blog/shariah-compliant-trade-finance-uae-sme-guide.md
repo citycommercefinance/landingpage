@@ -1,7 +1,8 @@
 ---
 title: "Shariah-Compliant Trade Finance in the UAE: A Practical Guide for SMEs"
+seoTitle: "Shariah-Compliant Trade Finance in the UAE: SME Guide"
 slug: "shariah-compliant-trade-finance-uae-sme-guide"
-description: "How Murabaha, Wakala and Kafalah actually work in a UAE import transaction — the structures, the fee rules that make them compliant, and the questions to ask before you sign."
+description: "How Murabaha, Wakala and Kafalah work in a UAE import deal — the structures, the fee rules that keep them compliant, and what to ask."
 category: "Islamic Finance"
 publishedAt: "2026-08-14"
 updatedAt: "2026-08-14"

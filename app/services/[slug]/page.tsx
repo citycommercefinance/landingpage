@@ -37,7 +37,7 @@ export default function ServiceDetail({ params }: Params) {
     serviceType: s.eyebrow || s.title,
     areaServed: "AE",
     provider: { "@type": "FinancialService", name: "City Commerce Finance LLC" },
-    url: `https://www.citycommercefinance.com/services/${s.slug}`,
+    url: `https://citycommercefinance.com/services/${s.slug}`,
   };
 
   const faqLd =

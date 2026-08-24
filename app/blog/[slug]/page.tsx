@@ -17,7 +17,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const { meta } = post;
   const url = `/blog/${meta.slug}`;
   return {
-    title: meta.title,
+    title: { absolute: meta.seoTitle },
     description: meta.description,
     alternates: { canonical: url },
     openGraph: {
